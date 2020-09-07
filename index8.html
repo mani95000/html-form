@@ -1,1 +1,45 @@
+<html>
 
+<head>Form Creation</head>
+<script>
+    function submitted(){
+    var a = document.getElementById("text1").value
+    var b = document.getElementById("text2").value
+    console.log(a)
+    console.log(b)
+    var form = document.forms[0]
+    for( var i=0; i<form.gender.length; i++){
+        if(form.gender[i].checked){
+            break
+        }
+    }
+    console.log(form.gender.value)
+    var c = document.forms[0].sel
+    console.log(c.options[c.selectedIndex].value)
+    }
+</script>
+
+<body>
+    <form>
+        Name: <input type="text" id="text1">
+        <p></p>
+        age: <input type="text" id="text2">
+        <p></p>
+        Gender:
+        <br>
+        <input type="radio" name="gender" value="male" checked>male
+        <input type="radio" name="gender" value="female">Female
+        <p></p>
+        <b>select a Qualification</b>
+        <select name="sel">
+        <option selected value="B.E">B.E</option>
+        <option value="B.Sc">B.Sc</option>
+        <option value ="B.Tech">B.Tech</option>
+        </select>
+        <p></p>
+     
+        <input type="button" value="submit" onclick="submitted()">
+    </form>
+</body>
+
+</html>
